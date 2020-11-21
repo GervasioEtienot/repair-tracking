@@ -6,6 +6,7 @@ import { MainScreen } from './components/MainScreen';
 const App = () => {
   return (
     <div>
+      <h1 className="text-7xl font-bold text-white text-center pt-10" >WorldCel</h1>
       <Router>
         <Switch>
           <Route path="/login" component={LoginScreen} />

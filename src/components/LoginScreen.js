@@ -10,9 +10,11 @@ export const LoginScreen = () => {
   const history = useHistory();
 
   const onSubmit = formValues => {
-    if(formValues.document === "32861551" && formValues.order === "0813") {
+    if(formValues.document === "30861536" && formValues.order === "0813") {
       console.log(formValues)
-      history.push('/')
+      sessionStorage.setItem('dni', formValues.document);
+      sessionStorage.setItem('order', formValues.order);
+      history.push('/');
     } else {
       alert("Datos incorrectos");
     }
@@ -21,7 +23,7 @@ export const LoginScreen = () => {
 
   return (
     <div>
-      <h1 className="text-7xl font-bold text-white text-center pt-10" >WorldCel</h1>
+      {/* <h1 className="text-7xl font-bold text-white text-center pt-10" >WorldCel</h1> */}
       <div className="bg-white w-1/3 mx-auto mt-8 mb-4 shadow-md rounded px-8 pt-6 pb-8 place-content-center">
           <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
             <div className="mb-4">
@@ -32,7 +34,7 @@ export const LoginScreen = () => {
                   id="document"
                   name="document"
                   type="number"
-                  defaultValue="32861551"
+                  defaultValue="30861536"
                   placeholder="Ingrese su DNI"
                   ref={register({ required: true })}
                   className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker"
