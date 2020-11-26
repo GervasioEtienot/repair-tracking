@@ -36,7 +36,7 @@ export const LoginScreen = () => {
 
   return (
     <div>
-      <div className="bg-white w-1/3 mx-auto mt-8 mb-4 shadow-md rounded px-8 pt-6 pb-8 place-content-center">
+      <div className="bg-white w-2/3 sm:w-1/3 mx-auto mt-8 mb-4 shadow-md rounded px-8 pt-6 pb-8 place-content-center">
           <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">
             <div className="mb-4">
               <label className="block text-grey-darker text-sm font-bold mb-2" >
