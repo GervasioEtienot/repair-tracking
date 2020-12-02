@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Redirect, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import "../styles/loginScreen.css"
 import { dataClient } from '../assets/data';
 
@@ -14,6 +14,7 @@ export const LoginScreen = () => {
       console.log(formValues)
       sessionStorage.setItem('dni', formValues.document);
       sessionStorage.setItem('order', formValues.order);
+      sessionStorage.setItem('data', 0);
       history.push({
         pathname: "/main",
         state: { data: dataClient[0] }
@@ -24,6 +25,7 @@ export const LoginScreen = () => {
         console.log(formValues)
         sessionStorage.setItem('dni', formValues.document);
         sessionStorage.setItem('order', formValues.order);
+        sessionStorage.setItem('data', 1);
         history.push({
           pathname: "/main",
           state: { data: dataClient[1] }
