@@ -24,7 +24,7 @@ export const dataClient = [{
               color: "Negro",
               diagnostic: "Se sumergió en agua.",
               observations: "Con funda",
-              status: "Listo",
+              status: "Reparando",
               place: "Av. San Martín 125",
               date: "05/01/2021"
             }

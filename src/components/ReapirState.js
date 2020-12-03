@@ -19,7 +19,7 @@ export const ReapirState = ({ status, place, retirementDate }) => {
   
   return (
     <>
-        <div className="bg-white rounded p-4">
+        <div className="bg-white rounded p-4 mb-4">
           <Steps >
             <Step status={repairStatus[0]} title="Recibido" description=""  />
             <Step status={repairStatus[1]} title="Reparando"  />
